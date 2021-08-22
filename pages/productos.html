@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/comprar.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="container">
+        <div class="nav">
+            <ul>
+                <li class="active"><a href="../index.html"><strong>Inicio</a></strong></li>
+                <li><a href="registrar.html"><strong>Registrate</a></strong></li>
+                <li><a href="login.html"><strong>Login</strong></a></li>
+                <li><a href="productos.html"><strong>Comprar</strong></a></li>
+            </ul>
+        </div>
+
+        <div class="row">
+          <div class="col content center just">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">En Carro [<span class="total-count"></span>]</button>
+            <button class="clear-cart btn btn-danger">¡Limpiar Carro!</button>
+          </div>
+        </div>
+
+
+        <div class="row" style="margin-top: 20px;">
+          <div class="col">
+            <div class="card" style="width: 20rem;">
+              <img class="card-img-top" src="../images/anforas.pgn.jpg" alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">Anfora estilo griego</h4>
+                <p class="card-text">Precio: Q4,190.00</p>
+                <a href="#" data-name="Anfora-estilo-griego" data-price="4190" class="add-to-cart btn btn-primary">Agregar a carro</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+              <div class="card" style="width: 20rem;">
+                <img class="card-img-top" src="../images/anforatallada.jpg" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Anfora estilo tallada</h4>
+                  <p class="card-text">Precio: Q3,190.00</p>
+                  <a href="#" data-name="Anfora-estilo-tallada" data-price="3190" class="add-to-cart btn btn-primary">Agregar a carro</a>
+                </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 20rem;">
+              <img class="card-img-top" src="../images/anforabarro.jpg" alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">Anfora de barro</h4>
+                <p class="card-text">Precio: Q2,190.00</p>
+                <a href="#" data-name="Anfora-de-barro" data-price="2190" class="add-to-cart btn btn-primary">Agregar a carro</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 20px;">
+          <div class="col">
+            <div class="card" style="width: 20rem;">
+              <img class="card-img-top" src="../images/Florero.JPG" alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">Florero de Ceramica</h4>
+                <p class="card-text">Precio: Q1,200.00</p>
+                <a href="#" data-name="Florero-de-Ceramica" data-price="1200" class="add-to-cart btn btn-primary">Agregar a carro</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+              <div class="card" style="width: 20rem;">
+                <img class="card-img-top" src="../images/Florerobarro.jpg" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">Florrero de Barro</h4>
+                  <p class="card-text">Precio: Q2,200.00</p>
+                  <a href="#" data-name="Florrero-de-Barro" data-price="2200" class="add-to-cart btn btn-primary">Agregar a carro</a>
+                </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 20rem;">
+              <img class="card-img-top" src="../images/Floreros 1-1.JPG" alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">Florero Ubisha</h4>
+                <p class="card-text">Precio: Q2,000.00</p>
+                <a href="#" data-name="Florero-Ubisha" data-price="2000" class="add-to-cart btn btn-primary">Agregar a carro</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="show-cart table">
+                
+              </table>
+              <div>Precio Total: Q<span class="total-cart"></span></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="button" class="finaliza-compra btn btn-primary">¡Ordenar Ahora!</button>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+
+      <div class="footer">
+          <h2>PROYECTO NEGOCIO. BEVERLY MONTERROSO, AGOSTO 2021. </h2>
+      </div>
+    </div>
+    <script src="../scripts/comprar.js"></script>
+</body>
+
+</html>
